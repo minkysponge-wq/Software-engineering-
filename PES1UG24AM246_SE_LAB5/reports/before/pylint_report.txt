@@ -1,0 +1,24 @@
+************* Module maintenance_system
+maintenance_system.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+maintenance_system.py:10:0: C0116: Missing function or method docstring (missing-function-docstring)
+maintenance_system.py:10:0: W0102: Dangerous default value [] as argument (dangerous-default-value)
+maintenance_system.py:15:0: C0116: Missing function or method docstring (missing-function-docstring)
+maintenance_system.py:18:4: W0702: No exception type(s) specified (bare-except)
+maintenance_system.py:21:0: C0116: Missing function or method docstring (missing-function-docstring)
+maintenance_system.py:23:4: C0206: Consider iterating with .items() (consider-using-dict-items)
+maintenance_system.py:29:0: C0116: Missing function or method docstring (missing-function-docstring)
+maintenance_system.py:30:4: W0603: Using the global statement (global-statement)
+maintenance_system.py:33:0: C0116: Missing function or method docstring (missing-function-docstring)
+maintenance_system.py:34:8: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
+maintenance_system.py:34:8: R1732: Consider using 'with' for resource-allocating operations (consider-using-with)
+maintenance_system.py:39:0: C0116: Missing function or method docstring (missing-function-docstring)
+maintenance_system.py:41:8: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
+maintenance_system.py:41:8: R1732: Consider using 'with' for resource-allocating operations (consider-using-with)
+maintenance_system.py:46:0: C0116: Missing function or method docstring (missing-function-docstring)
+maintenance_system.py:46:0: C0103: Function name "printAlerts" doesn't conform to snake_case naming style (invalid-name)
+maintenance_system.py:50:0: C0116: Missing function or method docstring (missing-function-docstring)
+maintenance_system.py:2:0: W0611: Unused import logging (unused-import)
+
+-----------------------------------
+Your code has been rated at 6.55/10
+

@@ -1,0 +1,12 @@
+maintenance_system.py:2:1: F401 'logging' imported but unused
+maintenance_system.py:10:1: E302 expected 2 blank lines, found 1
+maintenance_system.py:11:80: E501 line too long (98 > 79 characters)
+maintenance_system.py:15:1: E302 expected 2 blank lines, found 1
+maintenance_system.py:18:5: E722 do not use bare 'except'
+maintenance_system.py:21:1: E302 expected 2 blank lines, found 1
+maintenance_system.py:29:1: E302 expected 2 blank lines, found 1
+maintenance_system.py:33:1: E302 expected 2 blank lines, found 1
+maintenance_system.py:39:1: E302 expected 2 blank lines, found 1
+maintenance_system.py:46:1: E302 expected 2 blank lines, found 1
+maintenance_system.py:50:1: E302 expected 2 blank lines, found 1
+maintenance_system.py:66:1: E305 expected 2 blank lines after class or function definition, found 1

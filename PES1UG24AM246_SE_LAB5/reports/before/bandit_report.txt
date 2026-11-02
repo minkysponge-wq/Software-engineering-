@@ -1,0 +1,41 @@
+Run started:2026-11-02 05:12:00.686185+00:00
+
+Test results:
+>> Issue: [B306:blacklist] Use of insecure and deprecated function (mktemp).
+   Severity: Medium   Confidence: High
+   CWE: CWE-377 (https://cwe.mitre.org/data/definitions/377.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/blacklists/blacklist_calls.html#b306-mktemp-q
+   Location: ./maintenance_system.py:40:11
+39	def write_scratch_copy():
+40	    path = tempfile.mktemp(suffix=".json")
+41	    f = open(path, "w")
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: ./maintenance_system.py:61:4
+60	        update_service_date("CV-07", d)
+61	    assert len(assets) > 0, "no assets"
+62	    printAlerts()
+
+--------------------------------------------------
+
+Code scanned:
+	Total lines of code: 55
+	Total lines skipped (#nosec): 0
+	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0
+		Low: 1
+		Medium: 1
+		High: 0
+	Total issues (by confidence):
+		Undefined: 0
+		Low: 0
+		Medium: 0
+		High: 2
+Files skipped (0):
