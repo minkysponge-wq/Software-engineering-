@@ -15,6 +15,7 @@ assets = {}
 registration_log = []
 settings = {"service_interval_days": 90}
 
+
 def register_asset(asset_id, machine_type, logs=None):
     """Register an asset; reject empty or duplicate IDs."""
     if logs is None:
@@ -35,6 +36,7 @@ def register_asset(asset_id, machine_type, logs=None):
           "- total registrations this run:", len(logs))
     return True
 
+
 def update_service_date(asset_id, date):
     """Set the last service date (YYYY-MM-DD, not in the future)."""
     try:
@@ -52,6 +54,7 @@ def update_service_date(asset_id, date):
         return False
     return True
 
+
 def due_for_inspection():
     """Return IDs of assets whose last service exceeds the interval."""
     interval = timedelta(days=settings["service_interval_days"])
@@ -62,6 +65,7 @@ def due_for_inspection():
             due.append(asset_id)
     return due
 
+
 def change_interval(days):
     """Change the service interval; must be a positive whole number."""
     if not isinstance(days, int) or days <= 0:
@@ -71,11 +75,13 @@ def change_interval(days):
     settings["service_interval_days"] = days
     return True
 
+
 def export_service_report(filename="maintenance.json"):
     """Write all assets to a JSON report file."""
     with open(filename, "w", encoding="utf-8") as report:
         json.dump(assets, report, indent=2)
     print("Report written to " + filename)
+
 
 def write_scratch_copy():
     """Write a scratch copy of the registry to a secure temp file."""
@@ -85,11 +91,13 @@ def write_scratch_copy():
         json.dump(assets, scratch)
     print("Scratch copy at", scratch.name)
 
+
 def print_alerts():
     """Print an alert for every asset that is overdue for inspection."""
     for asset_id in due_for_inspection():
         print("ALERT: inspection overdue for", asset_id,
               assets[asset_id]["type"])
+
 
 def main():
     """Run the demo workflow."""
@@ -109,6 +117,7 @@ def main():
     print_alerts()
     export_service_report()
     write_scratch_copy()
+
 
 if __name__ == "__main__":
     main()
